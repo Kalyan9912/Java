@@ -15,7 +15,6 @@
     <name>Java Kubernetes Demo</name>
     <description>Spring Boot app deployed using Jenkins and Kubernetes</description>
 
-    <!-- Spring Boot Parent -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -23,38 +22,35 @@
         <relativePath/>
     </parent>
 
-    <!-- Java Version -->
     <properties>
         <java.version>17</java.version>
     </properties>
 
-    <!-- Dependencies -->
     <dependencies>
-
-        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- Optional: Actuator -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
-        <!-- Test (optional, skipped in Jenkins) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
-    <!-- Build -->
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
-            <!-- Spring Boot Plugi
+</project>
+
 
