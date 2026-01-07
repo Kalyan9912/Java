@@ -11,7 +11,7 @@ public class application {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello from Kubernetes How are YOU mister kalyan!";
+        return "Hello from Kubernetes How are YOU mister kalyan tell me how ar you !";
     }
 
     public static void main(String[] args) {
